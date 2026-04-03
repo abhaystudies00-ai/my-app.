@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- For Android 10+ (scoped storage) exports via cache -->
+    <cache-path
+        name="exports"
+        path="exports/" />
+    <!-- For Android 9 and below — external Downloads -->
+    <external-path
+        name="external_downloads"
+        path="ScreenTimeTracker/" />
+</paths>

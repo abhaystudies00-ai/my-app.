@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Screen Time Tracker</string>
+    <string name="permission_title">Usage Access Required</string>
+    <string name="permission_message">Screen Time Tracker needs Usage Access permission to track how long you spend in each app. Tap below to open Settings and enable it for this app.</string>
+    <string name="grant_permission">Grant Usage Access</string>
+    <string name="today_screen_time">Today\'s Screen Time</string>
+    <string name="top_apps">Top Apps</string>
+    <string name="installed_apps">Installed Apps</string>
+    <string name="uninstalled_apps">Uninstalled Apps</string>
+    <string name="no_data">No usage data yet.</string>
+    <string name="export_json">Export JSON</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="daily_limit">Daily Screen Time Limit</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="settings">Settings</string>
+    <string name="uninstalled_badge">Uninstalled</string>
+    <string name="last_used_prefix">Last: </string>
+</resources>

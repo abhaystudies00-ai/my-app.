@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?android:attr/windowBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ── Permission prompt (shown when permission is not granted) ── -->
+        <LinearLayout
+            android:id="@+id/permission_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_lock_idle_lock"
+                android:contentDescription="Lock icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Usage Access Required"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Screen Time Tracker needs Usage Access permission to track app usage. Tap the button below, find this app, and enable Usage Access."
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_grant_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Grant Usage Access" />
+
+        </LinearLayout>
+
+        <!-- ── Dashboard content (shown when permission is granted) ── -->
+        <LinearLayout
+            android:id="@+id/dashboard_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Today's total card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today's Screen Time"
+                        android:textSize="14sp"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                    <TextView
+                        android:id="@+id/tv_today_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0m"
+                        android:textSize="42sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Period tabs -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Week" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Month" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <!-- Bar chart -->
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Loading / Error indicators -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone" />
+
+            <!-- Top Apps section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Apps"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_no_apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No app usage data yet. Sync will update shortly."
+                android:textColor="?android:attr/textColorSecondary"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top_apps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

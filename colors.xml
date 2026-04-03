@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light palette -->
+    <color name="colorPrimary">#4F6BED</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#DBE1FF</color>
+    <color name="colorOnPrimaryContainer">#001158</color>
+    <color name="colorSecondary">#5C5F72</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSurface">#FEFBFF</color>
+    <color name="colorOnSurface">#1B1B1F</color>
+
+    <!-- Dark palette -->
+    <color name="colorPrimaryDark">#B4C4FF</color>
+    <color name="colorOnPrimaryDark">#00228C</color>
+    <color name="colorPrimaryContainerDark">#2851C5</color>
+    <color name="colorOnPrimaryContainerDark">#DBE1FF</color>
+    <color name="colorSecondaryDark">#C4C6DC</color>
+    <color name="colorOnSecondaryDark">#2D3042</color>
+    <color name="colorSurfaceDark">#1B1B1F</color>
+    <color name="colorOnSurfaceDark">#E4E1E6</color>
+
+    <!-- Chart color -->
+    <color name="chart_bar">#4F6BED</color>
+    <!-- Badge colors -->
+    <color name="uninstalled_badge_bg">#B00020</color>
+</resources>

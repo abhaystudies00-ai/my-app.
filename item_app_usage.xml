@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <!-- Rank badge -->
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:text="#1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnPrimary"
+            android:background="@drawable/bg_rank_badge" />
+
+        <!-- App info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_app_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="App Name"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <!-- Uninstalled badge -->
+                <TextView
+                    android:id="@+id/tv_uninstalled_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="Uninstalled"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_uninstalled_badge"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_package_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="com.example"
+                android:textSize="11sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_last_used"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last: Never"
+                android:textSize="11sp"
+                android:textColor="?android:attr/textColorSecondary" />
+
+        </LinearLayout>
+
+        <!-- Usage time -->
+        <TextView
+            android:id="@+id/tv_usage_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="0m"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
